@@ -348,7 +348,7 @@
                         "name": "postgresIp",
                         "properties": {
                             "privateIPAllocationMethod": "Static",
-                            "privateIPAddress": "[concat('10.0.101.', copyIndex(10))]",
+                            "privateIPAddress": "[concat('172.16.0.', copyIndex(10))]",
                             "subnet": {
                                 "id": "[concat(variables('vnetId'), '/subnets/', parameters('postgresNetName'))]"
                             },
@@ -499,7 +499,7 @@
     "outputs": {
         "fqdn": {
             "type": "String",
-            "value": "10.0.101.4"
+            "value": "172.16.101.4"
         },
         "port": {
             "type": "Int",
