@@ -38,7 +38,7 @@
                     {
                         "name": "LoadBalancerFrontEnd",
                         "properties": {
-                            "privateIPAddress": "10.0.101.4",
+                            "privateIPAddress": "172.16.101.4",
                             "privateIPAllocationMethod": "Static",
                             "subnet": {
                                 "id": "[concat(parameters('vnetId'), '/subnets/', parameters('postgresNetName'))]"

@@ -18,7 +18,7 @@ This template provides the following parameters, so you can customize your deplo
 
 * clusterName: What your cluster will be named.
 
-* _artifactsLocation: The repo name from which you are deploying. Default("https://raw.githubusercontent.com/HelloTech/azure_postgres/master")
+* _artifactsLocation: The repo name from which you are deploying. Default("https://raw.githubusercontent.com/youcef-f/azure_postgres/master")
 
 * newVnet: Whether or not you want to create a new vnet. Default("yes")
 

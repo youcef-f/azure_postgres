@@ -123,8 +123,8 @@ if [ $myIndex -eq 0 ]
     echo "name: postgres$myIndex" >> $patroniCfg
 fi
 echo "restapi:" >> $patroniCfg
-echo "  listen: 10.0.101.$(($myIndex + 10)):8008" >> $patroniCfg
-echo "  connect_address: 10.0.101.$(($myIndex + 10)):8008" >> $patroniCfg
+echo "  listen: 172.16.101.$(($myIndex + 10)):8008" >> $patroniCfg
+echo "  connect_address: 172.16.101.$(($myIndex + 10)):8008" >> $patroniCfg
 echo "" >> $patroniCfg
 echo "zookeeper:" >> $patroniCfg
 echo "  scope: *scope" >> $patroniCfg
@@ -134,7 +134,7 @@ echo "  hosts:" >> $patroniCfg
 i=0
 while [ $i -lt $amountZooKeepers ]
 do
-  echo "    - 10.0.100.$(($i + 10)):2181" >> $patroniCfg
+  echo "    - 172.16.100.$(($i + 10)):2181" >> $patroniCfg
   i=$(($i+1))
 done
 echo "" >> $patroniCfg
@@ -180,7 +180,7 @@ if [ $myIndex -ne 0 ]
     echo "  name: postgres$myIndex" >> $patroniCfg
 fi
 echo "  listen: '*:5433'" >> $patroniCfg
-echo "  connect_address: 10.0.101.$(($myIndex + 10)):5433" >> $patroniCfg
+echo "  connect_address: 172.16.101.$(($myIndex + 10)):5433" >> $patroniCfg
 echo "  data_dir: /media/data1/data/postgresql" >> $patroniCfg
 echo "  bin_dir: /usr/lib/postgresql/9.6/bin" >> $patroniCfg
 echo "  pgpass: /tmp/pgpass" >> $patroniCfg
@@ -263,7 +263,7 @@ echo "" >> $hacfgFile
 i=0
 while [ $i -lt $amountPostgres ]
 do
-  echo "  server Postgres$i 10.0.101.$(($i + 10)):5433 maxconn 100 check port 8008" >> $hacfgFile
+  echo "  server Postgres$i 172.16.101.$(($i + 10)):5433 maxconn 100 check port 8008" >> $hacfgFile
   i=$(($i+1))
 done
 echo "installed haproxy" >> /usr/local/startup.log

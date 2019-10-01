@@ -58,20 +58,20 @@
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
-                        "10.0.0.0/16"
+                        "172.16.0/16"
                     ]
                 },
                 "subnets": [
                     {
                         "name": "[variables('zookeeperNetName')]",
                         "properties": {
-                            "addressPrefix": "10.0.100.0/24"
+                            "addressPrefix": "172.16.100.0/24"
                         }
                     },
                     {
                         "name": "[variables('postgresNetName')]",
                         "properties": {
-                            "addressPrefix": "10.0.101.0/24"
+                            "addressPrefix": "172.16.101.0/24"
                         }
                     }
                 ]
@@ -145,7 +145,7 @@
                         "name": "zookeeperIp",
                         "properties": {
                             "privateIPAllocationMethod": "Static",
-                            "privateIPAddress": "[concat('10.0.100.', copyIndex(10))]",
+                            "privateIPAddress": "[concat('172.16.100.', copyIndex(10))]",
                             "subnet": {
                                 "id": "[concat(variables('vnetId'), '/subnets/', variables('zookeeperNetName'))]"
                             }
@@ -248,7 +248,7 @@
                         "name": "postgresIp",
                         "properties": {
                             "privateIPAllocationMethod": "Static",
-                            "privateIPAddress": "[concat('10.0.101.', copyIndex(10))]",
+                            "privateIPAddress": "[concat('172.16.101.', copyIndex(10))]",
                             "subnet": {
                                 "id": "[concat(variables('vnetId'), '/subnets/', variables('postgresNetName'))]"
                             },
