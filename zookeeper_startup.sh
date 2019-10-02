@@ -14,21 +14,23 @@ javac -version
 
 cd /usr/local
 
-wget "http://apache.mirrors.tds.net/zookeeper/zookeeper-3.4.9/zookeeper-3.4.9.tar.gz"
-tar -xvf "zookeeper-3.4.9.tar.gz"
+wget "https://apache.mirrors.benatherton.com/zookeeper/zookeeper-3.5.5/apache-zookeeper-3.5.5.tar.gz"
+tar -xvf "apache-zookeeper-3.5.5.tar.gz"
 
-touch zookeeper-3.4.9/conf/zoo.cfg
 
-echo "tickTime=2000" >> zookeeper-3.4.9/conf/zoo.cfg
-echo "dataDir=/var/lib/zookeeper" >> zookeeper-3.4.9/conf/zoo.cfg
-echo "clientPort=2181" >> zookeeper-3.4.9/conf/zoo.cfg
-echo "initLimit=5" >> zookeeper-3.4.9/conf/zoo.cfg
-echo "syncLimit=2" >> zookeeper-3.4.9/conf/zoo.cfg
+
+touch apache-zookeeper-3.5.5/conf/zoo.cfg
+
+echo "tickTime=2000" >> apache-zookeeper-3.5.5/conf/zoo.cfg
+echo "dataDir=/var/lib/zookeeper" >> apache-zookeeper-3.5.5/conf/zoo.cfg
+echo "clientPort=2181" >> apache-zookeeper-3.5.5/conf/zoo.cfg
+echo "initLimit=5" >> apache-zookeeper-3.5.5/conf/zoo.cfg
+echo "syncLimit=2" >> apache-zookeeper-3.5.5/conf/zoo.cfg
  
 i=1
 while [ $i -le $2 ]
 do
-    echo "server.$i=172.16.101.$(($i+9)):2888:3888" >> zookeeper-3.4.9/conf/zoo.cfg
+    echo "server.$i=172.16.101.$(($i+9)):2888:3888" >> apache-zookeeper-3.5.5/conf/zoo.cfg
     i=$(($i+1))
 done
 
@@ -36,4 +38,4 @@ mkdir -p /var/lib/zookeeper
 
 echo $(($1+1)) >> /var/lib/zookeeper/myid
 
-zookeeper-3.4.9/bin/zkServer.sh start
+apache-zookeeper-3.5.5/bin/zkServer.sh start
