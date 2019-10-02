@@ -3,7 +3,8 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "clusterName": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "dittopgsql"
         },
         "_artifactsLocation": {
             "type": "string",
@@ -14,6 +15,7 @@
         },
         "vnetGroup": {
             "type": "String",
+            "defaultValue": "ptr-uat-rg",
             "metadata": {
                 "description": "VNET Resource Group."
             }
