@@ -48,13 +48,13 @@ This template provides the following parameters, so you can customize your deplo
 # Scripts
 
 ### Zookeeper
-The creation of the zookeeper instances is handled by the [zookeeper_startup.sh](https://github.com/HelloTech/azure_postgres/blob/custom_deploy/zookeeper_startup.sh) script. If you would like to make any changes to what is installed on those vm's modify this file.
+The creation of the zookeeper instances is handled by the [zookeeper_startup.sh](https://github.com/youcef-f/azure_postgres/blob/custom_deploy/zookeeper_startup.sh) script. If you would like to make any changes to what is installed on those vm's modify this file.
 
 ### Mounts
-The mounting of the data ssds is handled by the [autopart.sh](https://github.com/HelloTech/azure_postgres/blob/custom_deploy/autopart.sh) script.
+The mounting of the data ssds is handled by the [autopart.sh](https://github.com/youcef-f/azure_postgres/blob/custom_deploy/autopart.sh) script.
 
 ### Postgres
-The creation of the postgres instance is handles by the [postgres_startup.sh](https://github.com/HelloTech/azure_postgres/blob/custom_deploy/postgres_startup.sh) script. If you would like to make any changes to what is installed on those vm's modify that script.
+The creation of the postgres instance is handles by the [postgres_startup.sh](https://github.com/youcef-f/azure_postgres/blob/custom_deploy/postgres_startup.sh) script. If you would like to make any changes to what is installed on those vm's modify that script.
 
 ### Notes
 This deployment can take anywhere from 90 to 120 minutes to complete due to long build time for plv8.
