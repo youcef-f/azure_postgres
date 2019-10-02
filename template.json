@@ -41,7 +41,7 @@
             }
         },
         "vnetName": {
-            "defaultValue": "",
+            "defaultValue": "ptr-uat-vnet",
             "type": "String",
             "metadata": {
                 "description": "Name of the vnet you would like to create, or that you would like to deploy this into."
@@ -55,7 +55,7 @@
             }
         },
         "postgresNetName": {
-            "defaultValue": "dcos-agentPublicSubnet",
+            "defaultValue": "postgres-agentPublicSubnet",
             "type": "String",
             "metadata": {
                 "description": "Name you would like to give to postgres' subnet."
@@ -63,7 +63,7 @@
         },
         "zookeeperVMSize": {
             "type": "string",
-            "defaultValue": "Standard_A3",
+            "defaultValue": "Standard_A2",
             "allowedValues": [
                 "Standard_D2_v2",
                 "Standard_D3_v2",
@@ -88,7 +88,7 @@
         },
         "postgresVMSize": {
             "type": "string",
-            "defaultValue": "Standard_DS12",
+            "defaultValue": "Standard_A2",
             "allowedValues": [
                 "Standard_D2_v2",
                 "Standard_D3_v2",
@@ -128,7 +128,8 @@
             }
         },
         "adminUsername": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "sshuser"
         },
         "adminPassword": {
             "type": "SecureString"
