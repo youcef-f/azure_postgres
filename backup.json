@@ -101,7 +101,7 @@
                 "count": "[length(variables('storageAccountPrefix'))]"
             },
             "properties": {
-                "accountType": "Premium_LRS"
+                "accountType": "Standard_LRS"
             }
         },
         {
