@@ -244,7 +244,7 @@
                         "name": "zookeeperIp",
                         "properties": {
                             "privateIPAllocationMethod": "Static",
-                            "privateIPAddress": "[concat('172.16.0.', copyIndex(10))]",
+                            "privateIPAddress": "[concat('172.16.100.', copyIndex(10))]",
                             "subnet": {
                                 "id": "[concat(variables('vnetId'), '/subnets/', parameters('zookeeperNetName'))]"
                             }
@@ -348,7 +348,7 @@
                         "name": "postgresIp",
                         "properties": {
                             "privateIPAllocationMethod": "Static",
-                            "privateIPAddress": "[concat('172.16.0.', copyIndex(10))]",
+                            "privateIPAddress": "[concat('172.16.101.', copyIndex(10))]",
                             "subnet": {
                                 "id": "[concat(variables('vnetId'), '/subnets/', parameters('postgresNetName'))]"
                             },
