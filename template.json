@@ -8,7 +8,7 @@
         },
         "_artifactsLocation": {
             "type": "string",
-            "defaultValue": "https://raw.githubusercontent.com/youcef-f/azure_postgres/master",
+            "defaultValue": "https://github.com/youcef-f/azure_postgres.git", 
             "metadata": {
                 "description": "Change this value to your repo name if deploying from a fork"
             }
